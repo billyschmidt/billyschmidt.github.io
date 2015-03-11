@@ -36,43 +36,6 @@
     <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
-<pre><code class="java">
-
-public class Demo {
-  private static final String CONSTANT = "String";
-  private Object o;
-  /**
-   * Creates a new demo.
-   * @param o The object to demonstrate.
-   */
-  public Demo(Object o) {
-    this.o = o;
-    String s = CONSTANT;
-    int i = 1;
-  }
-  public static void main(String[] args) {
-    Demo demo = new Demo();
-  }
-}
-
-</code></pre>
-<pre><code class="python">
-# this is a comment
-def some_function(x,y,z):
-    return x*y*z
-
-
-@requires_authorization
-def somefunc(param1='', param2=0):
-    r'''A docstring'''
-    if param1 > param2: # interesting
-        print 'Gre\'ater'
-    return (param2 - param1 + 1) or None
-
-class SomeClass:
-    pass
-
-</code></pre>
 
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
@@ -204,14 +167,48 @@ class SomeClass:
         </div>
     </aside>
 
-  I have no idea if this will show up or not
+  <div>
+  <pre><code class="java">
+
+// This code highlighting is pretty slick
+public class Demo {
+  private static final String CONSTANT = "String";
+  private Object o;
+  /**
+   * Creates a new demo.
+   * @param o The object to demonstrate.
+   */
+  public Demo(Object o) {
+    this.o = o;
+    String s = CONSTANT;
+    int i = 1;
+  }
+  public static void main(String[] args) {
+    Demo demo = new Demo();
+  }
+}
+
+</code></pre>
+<pre><code class="python">
+# this is a comment
+def some_function(x,y,z):
+    return x*y*z
+
+
+@requires_authorization
+def somefunc(param1='', param2=0):
+    r'''A docstring'''
+    if param1 > param2: # interesting
+        print 'Gre\'ater'
+    return (param2 - param1 + 1) or None
+
+class SomeClass:
+    pass
+
+</code></pre>
+
   
-  ```
-  this is some sample code
-  more code
-  def some_function():
-  ```
-  `single backtick`
+  </div>
   
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
