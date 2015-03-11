@@ -31,17 +31,32 @@
     <script src="/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </head>
-<p> 
 <body>
-```bash
-some test code here - don't think this works
-```
 
-<pre><code class="python">
+
+public class Demo {
+  private static final String CONSTANT = "String";
+  private Object o;
+  /**
+   * Creates a new demo.
+   * @param o The object to demonstrate.
+   */
+  public Demo(Object o) {
+    this.o = o;
+    String s = CONSTANT;
+    int i = 1;
+  }
+  public static void main(String[] args) {
+    Demo demo = new Demo();
+  }
+}
+
+<pre><code>
 # this is a comment
 def some_function(x,y,z):
     return x*y*z
-</p><p>    
+
+
 @requires_authorization
 def somefunc(param1='', param2=0):
     r'''A docstring'''
@@ -53,7 +68,6 @@ class SomeClass:
     pass
 
 </code></pre>
-</p>
 
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
