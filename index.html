@@ -187,6 +187,66 @@
 
             </div>
         </aside>
+        
+        
+        <div class="sidebar">
+<h2>Performing tasks with pipelines</h2>
+
+<ol>
+	<li>
+		<strong>Printing from the command line.</strong> Linux
+		provides a program called <tt class="user"><a href="lc3_man_pages/lpr1.html">lpr</a></tt> that
+		accepts standard input and sends it to the
+		printer. It is often used with pipes and
+		filters. Here are a couple of examples:
+<pre><tt class="narrow">
+cat poorly_formatted_report.txt | fmt | pr | lpr
+
+cat unsorted_list_with_dupes.txt | sort | uniq | pr | lpr
+</tt>
+</pre>
+
+		<p>In the first example, we use <tt class="user">cat</tt> to read the file and output it
+		to standard output, which is piped into the
+		standard input of <tt class="user">fmt.
+		fmt</tt> formats the text into neat paragraphs
+		and outputs it to standard output, which is
+		piped into the standard input of <tt class="user">pr. pr</tt> splits the text neatly into
+		pages and outputs it to standard output, which
+		is piped into the standard input of <tt class="user">lpr. lpr</tt> takes its standard input
+		and sends it to the printer.</p>
+
+		<p>The second example starts with an unsorted
+		list of data with duplicate entries. First, <tt class="user">cat</tt> sends the list into <tt class="user">sort</tt> which sorts it and feeds
+		it into <tt class="user">uniq</tt> which
+		removes any duplicates. Next <tt class="user">pr</tt> and <tt class="user">lpr</tt>
+		are used to paginate and print the list.<br>
+		<br>
+		</p>
+	</li>
+
+	<li>
+		<strong>Viewing the contents of tar files</strong>
+		Often you will see software distributed as a
+		<i>gzipped tar file</i>. This is a traditional
+		Unix style tape archive file (created with <tt class="user"><a href="lc3_man_pages/tar1.html">tar</a></tt>) that has
+		been compressed with <tt class="user"><a href="lc3_man_pages/gzip1.html">gzip</a></tt>. You can
+		recognize these files by their traditional file
+		extensions, ".tar.gz" or ".tgz". You can use the
+		following command to view the directory of such
+		a file on a Linux system:
+<pre><tt>tar tzvf name_of_file.tar.gz | less
+</tt>
+</pre>
+		<br>
+		<br>
+	</li>
+</ol>
+</div>
+        
+        
+        
+        
         <div> <pre><code class="java">
 // This code highlighting is pretty slick
 public class Demo {
